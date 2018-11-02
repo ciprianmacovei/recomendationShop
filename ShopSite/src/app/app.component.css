@@ -1,0 +1,9 @@
+.logInUserSection{
+	margin-left: 70%;
+	display: inline-block;
+	/*z-index: 100 !important;*/
+	position:absolute;
+}
+.logInUserSection > div{
+	margin-bottom: 5px;
+}

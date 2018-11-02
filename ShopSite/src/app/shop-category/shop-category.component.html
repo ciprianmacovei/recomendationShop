@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<dir class="col-lg-3 col-md-4 col-sm-6"> 
+			<div class="d-inline-block">
+				<ul>
+					<li class="list-group-item list-group-item-secondary mb-2" style="color: white">Recomandation</li>
+					<li><p class="liTitleName"><a [routerLink]="['lapTabTel']">Laptop,Tablete & Telefoane</a></p></li>
+					<li><p class="liTitleName"><a [routerLink]="['pcSoft']">PC,Software</a></p></li>
+					<li><p class="liTitleName"><a [routerLink]="['tvM']">TV,Audio-Video & Foto</a></p></li>
+					<li><p class="liTitleName"><a [routerLink]="['electClim']">Electronice & Climatizare</a></p></li>
+					<li><p class="liTitleName"><a [routerLink]="['gaming']">Gaming</a></p></li>
+					<li><p class="liTitleName"><a [routerLink]="['autoMoto']">Auto, Moto</a></p></li>
+					<li><p class="liTitleName"><a [routerLink]="['sport']">Sport</a></p></li>
+				</ul>
+			</div>
+		</dir>
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<app-chategory-items></app-chategory-items>
+		</div>
+	</div>	
+
+
+<app-shop-pager [page]="pagina" [totalPages]="totalPagini" (changePage)="pagina = $event"></app-shop-pager>	
+
+
+
+</div>

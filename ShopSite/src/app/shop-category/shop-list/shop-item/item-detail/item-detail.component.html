@@ -1,0 +1,22 @@
+<ul class="list-group" style="width: 500px">
+  <li class="list-group-item bg-inverse" style="border-radius: 4px;color: white"><p style="text-align: center">{{selectedItem?.nume}}</p></li>
+  <li class="list-group-item">{{selectedItem?.descriere}}</li>
+  <li class="list-group-item"><img src="{{selectedItem?.imagePath}}" style="margin-left:30%;max-width: 300px;max-height:200px "></li>
+  <li class="list-group-item"><p style="text-align: center;">Quantity:{{quantity}}</li>
+  <li class="list-group-item"><p style="justify-content: center;display: flex;font-size: 12px" >Price:{{selectedItem?.price}}$</p></li>
+  <li class="list-group-item">
+  	<div style="display:flex;flex-direction: column;">
+	  	<div class="rating" style="justify-content: center;display: flex;align-items: center" (click)="rating($event)">
+			<span value="5" class="stea">☆</span><span class="stea" value="4">☆</span><span class="stea" value="3">☆</span><span class="stea" value="2">☆</span><span class="stea" value="1">☆</span>
+			
+			<input type="hidden" name="whatever1" class="rating-value" value="0">
+		</div>
+		<div style="justify-content: center;display: flex;align-items: center">
+	  		<button class="btn btn-warning" (click)="sendRateItem()">Rate Items</button>
+	  	</div>
+	</div>
+  </li>
+  <li class="list-group-item" style="justify-content: center;display: flex"><button type="submit" class="btn btn-success" (click)="buyProduct($event)">Buy</button></li>
+</ul>
+
+

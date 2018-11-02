@@ -1,0 +1,7 @@
+.textSize{
+	font-size: 10px;
+}
+.itemMaxWidth{
+	max-height: 300px !important;
+	max-width: 200px !important;
+}

@@ -1,0 +1,83 @@
+<div class="container">
+	<div class="row">
+		
+		<!-- <div class="card logInUserSection" *ngIf="showLoginPannel!=0">
+			<div class="card-block border">
+					<div class="float-left">
+					<p>Welcome <a href="/loginCredencials" (click)="populateCredentialPannel()">{{this.userName}}</a></p>
+					</div>
+					<div class="float-right ml-2">
+					<button (click)="logOut($event)" class="btn btn-default">Log Out</button>
+					</div>
+			</div>
+			<div class="card-block">
+				<div class="float-right">
+					<div class="float-left" *ngIf="basketItemBoolean">
+						<button (click)="goBasket($event)" class="btn btn-success float-left mr-2">Go Basket</button>	
+						<button (click)="emptryBasket($event)" class="btn btn-danger float-right">Empty Basket</button>
+						<br>
+						<br>
+						<ul *ngFor="let item of basketItemBuy">
+							<li>{{item}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="card logInUserSection" *ngIf="showLoginPannel!=0">
+			<img class="card-img-top " src="../assets/icons8-user-96.png" alt="Card image cap" style="float:left;width: 100px;height: 100px">
+			<div class="float-right mr-2 mt-2">
+					<button (click)="logOut($event)" class="btn btn-default">Log Out</button>
+			</div>
+
+
+					<div class="card-body" style="float: left;">
+					<p>Welcome <a href="/loginCredencials" (click)="populateCredentialPannel()">{{this.userName}}</a></p>
+					</div>
+
+			<div class="card-block">
+				<div class="float-right">
+					<div class="float-left" *ngIf="basketItemBoolean">
+						<button (click)="goBasket($event)" class="btn btn-success float-left mr-2">Go Basket</button>	
+						<button (click)="emptryBasket($event)" class="btn btn-danger float-right">Empty Basket</button>
+						<br>
+						<br>
+						<ul *ngFor="let item of basketItemBuy">
+							<li>{{item}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>		
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="row">
+		
+
+		<dir class="mt-4">	
+			<h4><span class="badge badge-default">ShopyFy</span></h4>
+		</dir>
+
+	</div>
+	<dir class="row">
+		<app-header></app-header>
+		<app-search-bar></app-search-bar>
+	</dir>
+
+	<router-outlet></router-outlet>
+</div>
+
+
+	

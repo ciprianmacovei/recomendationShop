@@ -1,0 +1,42 @@
+<!-- <div class="centerFlex">
+	<button class="btn btn-primary btnMargins" (click)="priviousPost()">Privious</button>
+	<button class="btn btn-success btnMargins" (click)="nextPost()">Next</button>
+
+</div> -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [ngClass]="{'disabled':page === 1}">
+      <a class="page-link" href="javascript:void(0)" tabindex="-1" (click)="priviousPost()">Previous</a>
+    </li>
+    
+    <li class="page-item" [ngClass]="{'disabled':page === totalPages}">
+      <a class="page-link" href="javascript:void(0)" (click)="nextPost()" >Next</a>
+    </li>
+  </ul>
+</nav>
+
+<hr>
+<br>
+
+<div *ngFor="let item of items">
+  <a class="col-sm-12 col-lg-2 col-md-4 float-left mb-2" href="/itemDetail/{{item.id_item}}" >
+    <div class="list-group-item clearfix itemMaxWidth" >
+      <div class="list-group-item-heading bg-inverse pl-1" style="border-radius: 4px;color:white">
+        <p style="text-align: center">{{item.nume}}</p>
+      </div>
+    <!--  <div class="list-group-item mr-1">
+        <p class="textSize">{{item.descriere}}</p>
+      </div> -->
+      <div class="list-group-item textSize">
+        <p style="text-align: center">Quantity:{{item.numar}}</p>
+      </div>
+      <div class="list-group-item">
+        <img [src]="item.imagePath" class="img-responsive" alt="" style="max-height: 50px;max-width: 50px;">
+      </div>
+      <div class="list-group-item-text float-right textSize">
+        Price:{{item.price}}$
+      </div>
+      
+    </div>
+  </a>
+</div>
